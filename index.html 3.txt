@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glance Home Decor | Inspired Spaces. Timeless Style.</title>
+    
+    <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..800;1,400..800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #8C7355;
+            --primary-dark: #6E583E;
+            --accent: #A38F73;
+            --bg-light: #FAF8F5;
+            --bg-card: #FFFFFF;
+            --text-dark: #2B2927;
+            --text-muted: #666059;
+            --border-light: #E8E2D9;
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-light);
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-box {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+        }
+
+        .logo-box img {
+            height: 55px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .btn-call {
+            background-color: var(--primary);
+            color: white;
+            padding: 0.6rem 1.4rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: background 0.3s;
+        }
+
+        .btn-call:hover {
+            background-color: var(--primary-dark);
+        }
+
+        /* Hero Video Section */
+        .hero {
+            position: relative;
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 75px;
+            overflow: hidden;
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: 1;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+            filter: brightness(0.55);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 0 2rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            color: #E8E2D9;
+        }
+
+        .hero-title {
+            font-family: var(--font-heading);
+            font-size: 3.8rem;
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-btn-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+            padding: 0.9rem 2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+        }
+
+        .btn-outline {
+            border: 2px solid white;
+            color: white;
+            padding: 0.9rem 2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-outline:hover {
+            background-color: white;
+            color: var(--text-dark);
+        }
+
+        /* Section Global */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+
+        .section-subtitle {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.85rem;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            color: var(--text-dark);
+            margin-top: 0.5rem;
+        }
+
+        /* Core Values Section */
+        .core-values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .value-card {
+            background: var(--bg-card);
+            padding: 2.5rem 2rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-light);
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+        }
+
+        .value-num {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            color: var(--primary);
+            line-height: 1;
+            font-weight: 700;
+            opacity: 0.8;
+        }
+
+        .value-text h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.4rem;
+            color: var(--text-dark);
+        }
+
+        .value-text p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Product Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #fff;
+            border: 1px solid var(--border-light);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            cursor: pointer;
+        }
+
+        .gallery-img-box {
+            position: relative;
+            width: 100%;
+            height: 380px;
+            overflow: hidden;
+        }
+
+        .gallery-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover .gallery-img-box img {
+            transform: scale(1.06);
+        }
+
+        .gallery-info {
+            padding: 1.5rem;
+            background: var(--bg-card);
+        }
+
+        .gallery-category {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .gallery-title {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            margin: 0.3rem 0;
+            color: var(--text-dark);
+        }
+
+        /* Video Showcase Section */
+        .video-showcase {
+            background: #1A1918;
+            color: white;
+            padding: 5rem 2rem;
+            border-radius: 12px;
+            margin: 3rem auto;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .video-card {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            height: 250px;
+        }
+
+        .video-card video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Contact Section */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            background: white;
+            padding: 3rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-light);
+        }
+
+        .contact-info h3 {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .contact-detail i {
+            color: var(--primary);
+            font-size: 1.4rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 0.9rem;
+            border: 1px solid var(--border-light);
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 0.95rem;
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            z-index: 9999;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--text-dark);
+            color: #B5AFA8;
+            padding: 3rem 2rem 1.5rem;
+            text-align: center;
+            border-top: 1px solid #333;
+        }
+
+        /* Modal Lightbox */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 10000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.85);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            max-width: 90%;
+            max-height: 85vh;
+            border-radius: 8px;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title { font-size: 2.5rem; }
+            .nav-links { display: none; }
+            .contact-container { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo-box">
+                <img src="logo.jpeg" alt="Glance Home Decor Logo" onerror="this.src='https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=100&q=80'">
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#values">Core Values</a></li>
+                <li><a href="#products">Collections</a></li>
+                <li><a href="#videos">Showcase</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="header-actions">
+                <a href="tel:8000444472" class="btn-call">
+                    <i class="fa-solid fa-phone"></i> 8000444472
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Video Section -->
+    <div class="hero">
+        <video class="hero-video" autoplay loop muted playsinline>
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-living-room-with-modern-decorations-43034-large.mp4" type="video/mp4">
+        </video>
+        <div class="hero-content">
+            <div class="hero-subtitle">Glance Home Decor</div>
+            <h1 class="hero-title">Inspired Spaces. Timeless Style.</h1>
+            <p style="margin-bottom: 2rem; font-size: 1.1rem; color: #E8E2D9;">Crafting high-end interior aesthetics with custom rugs, luxury cushions, wall hangings, and decorative accents.</p>
+            <div class="hero-btn-group">
+                <a href="#products" class="btn-primary">Explore Collections</a>
+                <a href="https://wa.me/918000444472" target="_blank" class="btn-outline"><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Core Values Section -->
+    <section id="values">
+        <div class="section-header">
+            <span class="section-subtitle">Our Philosophy</span>
+            <h2 class="section-title">Our Core Values</h2>
+        </div>
+
+        <div class="core-values-grid">
+            <div class="value-card">
+                <div class="value-num">01</div>
+                <div class="value-text">
+                    <h3>Trust & Credibility</h3>
+                    <p>Building long-term relationships through absolute transparency and genuine craftsmanship.</p>
+                </div>
+            </div>
+
+            <div class="value-card">
+                <div class="value-num">02</div>
+                <div class="value-text">
+                    <h3>Superior Quality</h3>
+                    <p>Sourcing premium textiles and durable materials designed to last generations.</p>
+                </div>
+            </div>
+
+            <div class="value-card">
+                <div class="value-num">03</div>
+                <div class="value-text">
+                    <h3>Product Innovation</h3>
+                    <p>Blending classic artisan weaves with contemporary visual architecture.</p>
+                </div>
+            </div>
+
+            <div class="value-card">
+                <div class="value-num">04</div>
+                <div class="value-text">
+                    <h3>Respect for the Environment</h3>
+                    <p>Committing to sustainable production and eco-friendly home textiles.</p>
+                </div>
+            </div>
+
+            <div class="value-card">
+                <div class="value-num">05</div>
+                <div class="value-text">
+                    <h3>Community Service</h3>
+                    <p>Empowering local weavers and traditional artisans through fair trade practices.</p>
+                </div>
+            </div>
+
+            <div class="value-card">
+                <div class="value-num">06</div>
+                <div class="value-text">
+                    <h3>Constant & Consistent Learning</h3>
+                    <p>Evolving with global interior design trends to provide cutting-edge style.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Collections Section -->
+    <section id="products">
+        <div class="section-header">
+            <span class="section-subtitle">Curated Gallery</span>
+            <h2 class="section-title">Our Signature Collections</h2>
+        </div>
+
+        <div class="gallery-grid">
+
+            <!-- Item 1: Paisley Wall Hanging tapestry -->
+            <div class="gallery-item" onclick="openModal(this)">
+                <div class="gallery-img-box">
+                    <img src="https://images.unsplash.com/photo-1600121848594-d8644e57abab?auto=format&fit=crop&w=800&q=80" alt="Paisley Printed Wall Tapestry">
+                </div>
+                <div class="gallery-info">
+                    <span class="gallery-category">Tapestry & Wall Art</span>
+                    <h3 class="gallery-title">Vintage Paisley Wall Tapestry</h3>
+                    <p style="font-size:0.88rem; color:#666;">Ornate heritage designs draped elegantly for rustic and modern spaces.</p>
+                </div>
+            </div>
+
+            <!-- Item 2: Textured Cushion Collection -->
+            <div class="gallery-item" onclick="openModal(this)">
+                <div class="gallery-img-box">
+                    <img src="https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&w=800&q=80" alt="Plush Cushions">
+                </div>
+                <div class="gallery-info">
+                    <span class="gallery-category">Soft Furnishings</span>
+                    <h3 class="gallery-title">Botanical Cushion Ensemble</h3>
+                    <p style="font-size:0.88rem; color:#666;">Soft-touch floral & geometric pillow covers designed for window seating.</p>
+                </div>
+            </div>
+
+            <!-- Item 3: Botanical Woolen Rug -->
+            <div class="gallery-item" onclick="openModal(this)">
+                <div class="gallery-img-box">
+                    <img src="https://images.unsplash.com/photo-1600166898405-da9535204843?auto=format&fit=crop&w=800&q=80" alt="Floral Woolen Carpet">
+                </div>
+                <div class="gallery-info">
+                    <span class="gallery-category">Carpets & Rugs</span>
+                    <h3 class="gallery-title">Hand-Tufted Floral Rug</h3>
+                    <p style="font-size:0.88rem; color:#666;">Vibrant olive and gold floral patterns hand-woven with fine wool yarns.</p>
+                </div>
+            </div>
+
+            <!-- Item 4: Intricate Floral Runner Rug -->
+            <div class="gallery-item" onclick="openModal(this)">
+                <div class="gallery-img-box">
+                    <img src="https://images.unsplash.com/photo-1579656381226-5fc0f0100c3b?auto=format&fit=crop&w=800&q=80" alt="Terracotta Floral Runner">
+                </div>
+                <div class="gallery-info">
+                    <span class="gallery-category">Floor Accents</span>
+                    <h3 class="gallery-title">Terracotta Heritage Runner</h3>
+                    <p style="font-size:0.88rem; color:#666;">Warm rustic tones featuring traditional woven floor art for entryways.</p>
+                </div>
+            </div>
+
+            <!-- Item 5: Tasseled Door & Wall Garlands -->
+            <div class="gallery-item" onclick="openModal(this)">
+                <div class="gallery-img-box">
+                    <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=800&q=80" alt="Ethnic Tasseled Wall Garlands">
+                </div>
+                <div class="gallery-info">
+                    <span class="gallery-category">Handcrafted Hangings</span>
+                    <h3 class="gallery-title">Ethnic Tasseled Door Garlands</h3>
+                    <p style="font-size:0.88rem; color:#666;">Handcrafted festive hanging ornaments with intricate block-prints and tassels.</p>
+                </div>
+            </div>
+
+            <!-- Item 6: Modern Textile Fiber Wall Art -->
+            <div class="gallery-item" onclick="openModal(this)">
+                <div class="gallery-img-box">
+                    <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=800&q=80" alt="Abstract Macrame Wall Installation">
+                </div>
+                <div class="gallery-info">
+                    <span class="gallery-category">3D Fiber Art</span>
+                    <h3 class="gallery-title">Modern Fiber Wall Installation</h3>
+                    <p style="font-size:0.88rem; color:#666;">Rich textured woolen wall sculptures that bring depth to blank luxury interiors.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Video Showcase Section -->
+    <div id="videos" style="max-width: 1280px; margin: 0 auto; padding: 0 2rem;">
+        <div class="video-showcase">
+            <div style="text-align: center;">
+                <span class="section-subtitle" style="color: #A38F73;">Craftsmanship in Motion</span>
+                <h2 class="section-title" style="color: white;">Live Ambient Decor Showcase</h2>
+            </div>
+
+            <div class="video-grid">
+                <div class="video-card">
+                    <video autoplay loop muted playsinline>
+                        <source src="https://assets.mixkit.co/videos/preview/mixkit-modern-apartment-with-stylish-decoration-43036-large.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-card">
+                    <video autoplay loop muted playsinline>
+                        <source src="https://assets.mixkit.co/videos/preview/mixkit-luxurious-living-room-with-modern-furniture-43037-large.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-card">
+                    <video autoplay loop muted playsinline>
+                        <source src="https://assets.mixkit.co/videos/preview/mixkit-modern-interior-design-of-a-living-room-43038-large.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Get In Touch</h3>
+                <p style="color: var(--text-muted); margin-bottom: 2rem;">Have inquiries about custom sizes or bulk orders? Reach out directly via call or WhatsApp.</p>
+
+                <div class="contact-detail">
+                    <i class="fa-solid fa-phone"></i>
+                    <div>
+                        <strong style="display:block; font-size:0.85rem; color:var(--text-muted);">Phone Number</strong>
+                        <a href="tel:8000444472" style="text-decoration:none; color:inherit; font-weight:600;">+91 8000444472</a>
+                    </div>
+                </div>
+
+                <div class="contact-detail">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <div>
+                        <strong style="display:block; font-size:0.85rem; color:var(--text-muted);">WhatsApp Support</strong>
+                        <a href="https://wa.me/918000444472" target="_blank" style="text-decoration:none; color:inherit; font-weight:600;">Message Us Directly</a>
+                    </div>
+                </div>
+
+                <div class="contact-detail">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <strong style="display:block; font-size:0.85rem; color:var(--text-muted);">Brand Headquarters</strong>
+                        <span>Glance Home Decor Studio, India</span>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <form onsubmit="alert('Thank you for your message! We will get back to you shortly.'); return false;">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Phone Number" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea rows="4" placeholder="How can we help you?" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary" style="width:100%; border:none; cursor:pointer;">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/918000444472" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Glance Home Decor. All Rights Reserved. | Inspired Spaces. Timeless Style.</p>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+
+    <script>
+        function openModal(element) {
+            const imgSrc = element.querySelector('img').src;
+            document.getElementById('modalImg').src = imgSrc;
+            document.getElementById('imageModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
